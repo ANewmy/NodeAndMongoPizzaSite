@@ -1,0 +1,24 @@
+    {
+        "pizzaName" : "cheese",
+        "price" : 6.99,
+        "imgName" : "cheese.jpg",
+        "description" : "only cheese"
+   }
+   {
+        "pizzaName" : "work",
+        "price" : 9.99,
+        "imgName" : "work.jpg",
+        "description" : "meat,veg,sausage,beef,pepper,chicken,onion,cheese"
+   }
+   {
+        "pizzaName" : "meat",
+        "price" : 6.99,
+        "imgName" : "meat.jpg",
+        "description" : "only meat, chicken,beef,sausage"
+   }
+   {   
+        "pizzaName" : "BBQ chicken",
+        "price" : 8.99,
+        "imgName" : "bbq.jpg",
+        "description" : "chicken, pineapple"
+   }

@@ -1,0 +1,8 @@
+{"_id":{"$oid":"5ac6814c6d38ff105c7b621e"},"pizzaName":"BBQ chicken","price":8.99,"imgName":"bbq.jpg","description":"chicken, pineapple"}
+{"_id":{"$oid":"5ac6814c6d38ff105c7b621f"},"pizzaName":"meat","price":6.99,"imgName":"meat.jpg","description":"only meat, chicken,beef,sausage"}
+{"_id":{"$oid":"5ac6814c6d38ff105c7b6220"},"pizzaName":"cheese","price":6.99,"imgName":"cheese.jpg","description":"only cheese"}
+{"_id":{"$oid":"5ac6814c6d38ff105c7b6221"},"pizzaName":"work","price":9.99,"imgName":"work.jpg","description":"meat,veg,sausage,beef,pepper,chicken,onion,cheese"}
+{"_id":{"$oid":"5acce3a66d38ff105c7b6ff9"},"pizzaName":"work","price":9.99,"imgName":"work.jpg","description":"meat,veg,sausage,beef,pepper,chicken,onion,cheese"}
+{"_id":{"$oid":"5acce3a66d38ff105c7b6ffa"},"pizzaName":"cheese","price":6.99,"imgName":"cheese.jpg","description":"only cheese"}
+{"_id":{"$oid":"5acce3a66d38ff105c7b6ffb"},"pizzaName":"meat","price":6.99,"imgName":"meat.jpg","description":"only meat, chicken,beef,sausage"}
+{"_id":{"$oid":"5acce3a66d38ff105c7b6ffc"},"pizzaName":"BBQ chicken","price":8.99,"imgName":"bbq.jpg","description":"chicken, pineapple"}

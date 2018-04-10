@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Check Out</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript"
+    src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" >
+</script>
+
+<link rel="stylesheet" type="text/css" href="./css/StyleB.css">
+
+<script type="text/javascript" src="./angJS/cart.js"></script>
+</head>
+<body>
+  <div class="container" ng-app="cartApp" ng-controller="cartCtrl">
+  <h2>Check Out</h2>
+    <h2>{{msg}}</h2>
+   <form >
+    <div class="form-group">
+      
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="Phone" class="form-control" id="Phone" placeholder="Enter Phone Number" ng-model="phone" value="4784453344">
+    </div>
+    <div class="form-group">
+
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="email" value="y.l@g.c"
+              >
+    </div>
+    
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+    
+    <button type="submit" class="btn btn-default" ng-click="placeOrder()">Place Order</button>
+  </form>
+</div>
+</body>
+</html>
