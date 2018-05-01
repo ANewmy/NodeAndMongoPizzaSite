@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Cart</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" >
+</script>
+
+<link rel="stylesheet" type="text/css" href="./css/StyleB.css">
+
+<script type="text/javascript" src="./angJS/order.js"></script>
+</head>
+<body>
+	<div class="container" ng-app="orderApp" ng-controller="orderCtrl"
+	>
+	<div class="page-header">
+		<div class="row rowbottom">
+			<img class="col-md-2" src="./images/logo1.jpg" alt="logo"> 
+		<div class="col-md-8">
+					<ul class="list-inline nav navbar-nav" >	
+						<li><a class=" list-inline-item" href="./orders">Orders</a></li>
+						<li><a class=" list-inline-item" href="./customers">Customers</a></li>
+						<li><a class=" list-inline-item" href="./menus">Menus</a></li>
+						<li><a class=" list-inline-item" href="./logout">Logout</a></li>
+						
+
+					</ul>
+				</div>
+			<a class="nav navbar-nav" class="col-md-2" href="./cart.html"><img class="cart" src="./images/cart.png" alt="cart" style="width:60px;height:60px;"> 
+				<span ng-bind="numItems" class="badge"></span></a>
+			</div>
+		</div>
+		<div class="content">
+			
+			<table class="table table-hover">
+				<p>{{msg}}</p>
+				<tr>
+					<th class="col-md-2">Customer ID</th>
+					<th class="col-md-2">Pizza Name</th>
+					<th class="col-md-2">Quantity</th>
+					<th class="col-md-2">Price</th>
+					<th class="col-md-2">Date</th>
+				</tr>
+				<tr ng-repeat="item in orders track by $index">
+					<td class="col-md-2">{{item.customerID}}</td>
+					<td class="col-md-2">{{item.pizzaName|uppercase}}</td>
+					<td ng-hide="editingData[$index]">{{item.quantity}}</td>
+					<td ng-show="editingData[$index]"><input type="text" ng-model="item.quantity" /></td>
+
+					<!-- <td class="col-md-2">{{item.quantity}}</td> -->
+					<td class="col-md-2">{{item.totalPrice}}</td>
+					<td class="col-md-2">{{item.date}}</td>
+					
+					<td class="col-md-1"><button type="button" class="btn btn-primary" ng-click="removeOrder(item)" >Remove</button></td>
+<!-- 					<td class="col-md-1"><button type="button" class="btn btn-primary" ng-click="edit($index)" >Edit</button></td> -->
+				</tr>
+
+			</table>
+
+			<hr>
+		</div>
+		<div class="row">
+		<div class="col-md-1 col-md-push-10"><button type="button" class="btn btn-primary" ng-click="save()" >Update</button>
+		</div>
+	</div>	
+
+	<footer> 
+		<div class="row">
+			
+			<img class="col-md-2" src="./images/logo1.jpg" alt="logo">
+			<ul class="col-md-8 list-inline nav navbar-nav">
+				<li><a href="./service">Customer Service</a></li>
+				<li><a href="./account">Account</a></li>
+				<li><a href="./special">Special</a></li>
+				<li><a href="./about.html">About</a></li>
+
+			</ul>
+			<button class="col-md-1" ng-click="clearCart()" type="button" >Clear cart</button>
+		</div>
+
+
+		<p>Lorem ipsum Sit amet adipisicing dolor non anim voluptate cillum dolor eu eu ad irure.</p>
+
+		<p>Lorem ipsum Sit amet adipisicing dolor non anim voluptate cillum dolor eu eu ad irure. Lorem ipsum Duis aute Excepteur.</p>
+
+	</footer>
+</div>
+<script type="text/javascript">
+
+</script>
+
+</body>
+</html>
