@@ -27,17 +27,33 @@ app.use(session(sess));
 
 var MongoClient = require('mongodb').MongoClient;
 var db, menu;
-var dbURL = 'mongodb://pizza1:pizza1@localhost:27017/pizza';
 
-MongoClient.connect(dbURL, function(err, database) {
-    if (err) throw err;
+var args = process.argv.slice(2);
 
-    db = database.db('pizza');
+if (args == 'dev') {
+    var dbURL = 'mongodb://pizza1:pizza1@localhost:27017/pizza';
+    MongoClient.connect(dbURL, function(err, database) {
+        if (err) throw err;
 
-    // Start the application after the database connection is ready
-    app.listen(8000);
-    console.log('Listening on port 8000');
-});
+        db = database.db('pizza');
+
+        // Start the application after the database connection is ready
+        app.listen(8000);
+        console.log('Listening on port 8000');
+    });
+} else {
+    const PORT = process.env.PORT || 8000;
+    var dbURL = 'mongodb://pizza1:pizza1@ds111430.mlab.com:11430/heroku_cfj3kqdj';
+    MongoClient.connect(dbURL, function(err, database) {
+        if (err) throw err;
+
+        db = database.db('heroku_cfj3kqdj');
+
+        // Start the application after the database connection is ready
+        app.listen(PORT);
+        console.log('Listening on port 8000');
+    });
+}
 
 app.get('/', function(req, res) {
     res.sendFile(`${publicPath}/index.html`);
